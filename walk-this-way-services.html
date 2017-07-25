@@ -1,0 +1,201 @@
+<!doctype html>
+<meta name="veiwport" content="width=device-width">
+<title> Services </title>
+
+<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<style>
+html {
+  background-image: url('http://sotheresthatblog.com/wp-content/uploads/2015/08/san-francisco-full-11-1280x540.jpg');
+  background-size: 1480px;
+  background-repeat: no-repeat;
+}
+a:hover{
+ color: orange;
+}
+a {
+ color: white;
+ text-decoration: none;
+}
+#links {
+  font-family: "fira sans", sans-serif;
+  font-size: 23px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+ }
+
+#map {
+ height: 700px;
+ width: 550px;
+ position: absolute;
+ top: 663px;
+ left: 50px;
+}
+
+#services {
+  position: absolute;
+  left: 950px;
+  top: 645px;
+  font-family: "lobster", arial;
+  font-size: 43px;
+  color: orange;
+
+}
+#scribbleWords {
+  position: absolute;
+  left:840px;
+  top: 750px;
+  font-family: "roboto condensed", arial;
+  font-size: 20px;
+  color: black;
+}
+#pThree{
+ color: orange;
+ font-family: "lobster";
+}
+#pFour{
+ color: orange;
+ font-family: 'lobster';
+}
+#pFive{
+ color: orange;
+ font-family: "lobster";
+ }
+ #pSix{
+  color: orange;
+  font-family: "lobster";
+}
+
+#pricing {
+  position: absolute;
+  left:240px;
+  top: 1420px;
+  font-family: "fira sans", arial;
+  font-size: 27px;
+  color: orange;
+}
+#credits {
+  position:absolute;
+  top: 1800px;
+  left: 400px;
+  font-family: "roboto condensed", sans-serif;
+  text-align: center;
+}
+#slogan {
+  position: absolute;
+  text-align: center;
+  right: 20px;
+  top: 30px;
+  font-size: 23px;
+  color: white;
+  font-family: "fira sans", sans-serif;
+}
+</style>
+
+
+<!-- add services but ask nicki for stuff -->
+
+<!-- add graphic for her slogan -->
+<!-- ask nicki for her server setup -->
+<!-- /highlight area used also look at trails also they are permitted to walk on special trails-->
+<p id='slogan'> Walking Marins Happiest
+  <br> Dogs Since 2001
+  <h1 id='services'>Services</h1>
+<div id='scribbleWords'>
+  <p id='pOne'> We offer exercise and socialization for your
+    <br>best friend.  Our group hikes give your dog a
+    <br>chance to explore the outdoors with a pack of
+    <br>furry friends.  Your dog will be picked up for
+    <br>a fun, group hike in the hills of Marin and
+    <br>returned to you after the walk.  We understand
+    <br>that each dog is differeent and are happy to meet
+    <br>whatever needs you and your pet may have.
+
+    <p id='pTwo'>Our services include group hikes, individual walks
+    <br>and pet sitting.
+
+    <p id='pThree'>Group Walks
+    <p>Group walks introduce your dog to a social
+    <br>environment where he or she can interact and make
+    <br>friends with other dogs. Being part of a pack
+    <br>stimulates your dog mentally and teaches him or her
+    <br>dog etiquette.  Give your best friend a chance
+    <br>to make new friends by sending him or her on daily
+    <br>group walks!  Group walks last one hour.
+
+    <p id='pFour'>Individual Walks
+    <p>Individual walks give your dog a chance for some
+    <br>one-on-one time with our Walk This Way dog walkers.
+    <br>Great for puppies, older dogs or dogs with special
+    <br>needs, the Individual Walk is a great way to give
+    <br>your dog lots of TLC.  Individual walks last 25 mins.
+
+    <p id='pFive'> Pet Sitting: Your Home
+    <p>This allows your dog to stay in the comfort of his
+    <br>or her own home and still receive love and care while
+    <br>you're away. Pet Sitting includes morning and evening
+    <br>walks, food, water, any medications necessary,
+    <br>picking up mail, watering plants and, of course,
+    <br>lots of TLC.
+
+    <p id='pSix'> Pet Sitting: Our Home
+    <p>If you would prefer, we can take care of your dog
+    <br>overnight at our house. Your dog will be cared for
+    <br>completely with lots of love, two walks a day, and we
+    <br>care of any special needs.
+
+</div>
+
+<div id = 'pricing'>
+
+  <p id='pricingSign'> Pricing
+    <p> $30 per hour
+      <p> $50 for whole day
+        <p> $60 overnight stay
+
+</div>
+
+
+
+<div id='links'>
+<a href="walk-this-way.html"> Home </a>|
+<a href="walk-this-way-services.html"> Services & Pricing </a>|
+<a href="walk-this-way-walkers.html"> More</a>
+</div>
+
+<img src='' id='logoImage' width='125px'>
+
+<div id="map"></div>
+
+<p id='credits'> Made by Jackson Baker | est.2001 | updated 2017 | Walk This Way!
+    <script>
+      function initMap() {
+        var millValley = {lat: 37.948377, lng: -122.586136};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: millValley
+        });
+
+      var areaOfWork = [
+        {lat: 37.866105, lng: -122.542534},
+        {lat: 38.027388, lng: -122.761917},
+        {lat: 38.130624, lng: -122.497559},
+        {lat: 37.988435, lng: -122.474899}
+      ];
+      var moreAboutTriangle = new google.maps.Polygon({
+        paths: areaOfWork,
+        strokeColor: '#0379ff',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#049bff',
+        fillOpacity: 0.15
+      });
+      moreAboutTriangle.setMap(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1ZcuUym-Hvt1R9XOYYgBNh6FsQs9me7g&callback=initMap">
+    </script>
